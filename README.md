@@ -5,3 +5,4 @@ Modulo
 
 ### Modulos Usados
 * Postgresql -> ```go get github.com/lib/pq```
+* NATS -> ```go get github.com/nats-io/nats.go```

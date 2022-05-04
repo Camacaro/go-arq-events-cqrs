@@ -7,7 +7,9 @@ import (
 )
 
 /*
-	Repository pattern
+	Principio Inversion de dependencia
+	para que nuestro codigo dependa de esta abstraccion
+	y no de implementaciones concreta
 
 	Para eventos, se puede usar NATS, RabbitMQ, Kafka, etc.
 */

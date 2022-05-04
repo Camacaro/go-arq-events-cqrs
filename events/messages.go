@@ -12,11 +12,11 @@ type Message interface {
 */
 type CreateFeedMessage struct {
 	ID          string    `json:"id"`
-	Tittle      string    `json:"title"`
+	Title       string    `json:"title"`
 	Description string    `json:"description"`
 	CreatedAt   time.Time `json:"created_at"`
 }
 
-func (m *CreateFeedMessage) Type() string {
+func (m CreateFeedMessage) Type() string {
 	return "create_feed"
 }
