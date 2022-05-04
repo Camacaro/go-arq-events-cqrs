@@ -1,0 +1,109 @@
+<mxfile host="65bd71144e">
+    <diagram id="xoy9svoYrERLmkWWSknX" name="Page-1">
+        <mxGraphModel dx="1141" dy="853" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="&lt;h1 style=&quot;margin: 0.67em 0px ; font-size: 1.5rem ; line-height: 2.25rem ; color: rgb(239 , 243 , 248) ; font-family: &amp;#34;roboto&amp;#34; , sans-serif&quot;&gt;CQRS: Command Query Responsibility Segregation&lt;/h1&gt;&lt;p&gt;Nos dice que debemos segregar la responsabilidad de lectura y escritura separadas. De esa forma podemos escalar uno o el otro dependiendo de nuestra aplicacion a la base de datos.&amp;nbsp;&lt;br&gt;&lt;br&gt;Command: Hace referencia a la escritura&amp;nbsp;&lt;/p&gt;&lt;p&gt;Query: Hace referencia hacia la lectura&amp;nbsp;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="12" y="12" width="731" height="159" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="3" target="5">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="417" y="386"/>
+                            <mxPoint x="224" y="386"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="3" value="" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+                    <mxGeometry x="387" y="234" width="60" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;curved=1;" edge="1" parent="1" source="4" target="3">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="224" y="191"/>
+                            <mxPoint x="417" y="191"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="4" value="C" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="188" y="212" width="72" height="53" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Q" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="188" y="310" width="72" height="53" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="Write" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="294" y="157" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="Read" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="290" y="348" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="Q" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="167" y="322" width="72" height="53" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="Q" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="147" y="336.5" width="72" height="53" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="Q" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="138" y="348" width="72" height="53" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="C" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="176" y="221" width="72" height="53" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="C" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="160" y="234" width="72" height="53" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="Escalar los servicios de manera independiente" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="5" y="244" width="155" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="&lt;h1&gt;Implementado con Arq Eventos&lt;/h1&gt;&lt;p&gt;Los servicios de escritura y los de lectura de tendran que subscribir a la cola de mensajes y escuchar lo que le convenga para poder actuar al igual que publicar nuevos mensajes. Ademas de esto se aplica lo mismo se pueden le vandar otros servicios de escritura y conectarlos a la cola de mensajes&amp;nbsp;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="15" y="460" width="403" height="122" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="Messages Broker (MB) or Messages Queue (MQ)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="96" y="713" width="369" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="Q" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="244.5" y="623" width="72" height="53" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="21" target="19">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="C" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="244.5" y="802" width="72" height="53" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="C" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="254.5" y="812" width="72" height="53" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="C" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="264.5" y="822" width="72" height="53" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.526;entryY=0.03;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="24" target="19">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="Q" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="254.5" y="633" width="72" height="53" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.847;entryY=0.989;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="25" target="19">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="C" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="372" y="802" width="72" height="53" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="Q" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="366" y="618" width="72" height="53" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="Q" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="376" y="628" width="72" height="53" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" style="html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="28">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="422.125" y="706.0625" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="28" value="Q" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="386" y="638" width="72" height="53" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

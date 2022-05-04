@@ -1,0 +1,154 @@
+<mxfile host="65bd71144e">
+    <diagram id="TVHKaYpTC4EBIObI1VIa" name="Page-1">
+        <mxGraphModel dx="2156" dy="1611" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="pg" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" parent="1" vertex="1">
+                    <mxGeometry x="161" y="187" width="60" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" style="edgeStyle=none;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=27.5;entryPerimeter=0;" parent="1" source="3" target="2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" style="edgeStyle=none;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" parent="1" source="3" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="317" y="337" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="317" y="245"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="3" value="Sercice C (command)&lt;br&gt;/feeds" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="366" y="200" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Client" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+                    <mxGeometry x="737" y="200" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="" style="endArrow=classic;html=1;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="706" y="224" as="sourcePoint"/>
+                        <mxPoint x="503" y="224" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="11" value="HTTP REST" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="565" y="195" width="77" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="El cliente podra crear un petition http para almacenar un feed nuevo" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="153" width="218" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" style="edgeStyle=none;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" parent="1" source="14" target="16" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="326" y="475"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="14" value="NATS" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="244" y="341" width="329" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="Elasticsearch" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="101" y="460" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="Elasticsearch nos va a permitir hacer busquedas más rápida, gracias a que guardaremos los feed por indexacion.&lt;br&gt;&lt;br&gt;Nos permite indexar data para acceder a ella de manera mas rapida ya sea por titulo o descripcion" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="14" y="541" width="230" height="102" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="" style="endArrow=none;dashed=1;html=1;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="190" y="452" as="sourcePoint"/>
+                        <mxPoint x="190" y="274" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="19" value="Como se va a comunicar Elastic con la db?&lt;br&gt;Pues, usando NATS, que nos permite crear eventos donde se pueden subs y push&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="14" y="315" width="164" height="81" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="Publish: Luego de a ver guardado el feed vamos a notificar que se ha recibido un nuevo feed&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="330" y="276" width="199" height="49" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="Subscribe:&amp;nbsp; Elastic, se va subscribir a NAT para estar escuchando cuando se recibe un nuevo feed, de esta forma lo vamos a poder indexar" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="333" y="412" width="250" height="69" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" style="edgeStyle=none;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" parent="1" source="24" target="16" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="684" y="520"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="31" style="edgeStyle=none;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" parent="1" source="24" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="207" y="278" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="207" y="485"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="24" value="Q (query)&lt;br&gt;Service Read /feed /search" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="642" y="441" width="167" height="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="" style="endArrow=classic;html=1;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="745" y="300" as="sourcePoint"/>
+                        <mxPoint x="745" y="407" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="26" value="Para leer los feed o buscar por terminos se hara por una peticion HTTP" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="609" y="321" width="124" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="/search: Ira a buscar por el termino donde coincida con la busqueda.&lt;br&gt;&lt;br&gt;/search: Leer de elastic, cuales son los criterios que van hacer match el nivel de busqueda &lt;br&gt;&lt;br&gt;/feeds: va ir a base de datos a leer cuales son los feeds insertados" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="468" y="527" width="266" height="115" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" style="edgeStyle=none;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.087;entryY=0.001;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="32" target="14" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="Pushser (Websockets)" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="246" y="47" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="&lt;span&gt;Vamos a tener un websocket que estara escuchando cada nuevo feed que sea agragado en tiempo real. Y estara subscrito a la cola de mensajes&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="386" y="47" width="223" height="66" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="39" target="45">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="NGINX" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1258.5" y="425" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="" style="endArrow=classic;html=1;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="806" y="384" as="sourcePoint"/>
+                        <mxPoint x="906" y="384" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="41" value="Sercice C (command)&lt;br&gt;/feeds" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1092" y="249" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="Q (query)&lt;br&gt;Service Read /feed /search" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1233" y="249" width="167" height="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="Pushser (Websockets)" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1422" y="247" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="1059" y="207" width="519" height="151" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="&lt;h1&gt;Heading&lt;/h1&gt;&lt;p&gt;Vamos a tener nuestros 3 sercicios viviendo todos dentro de la misma aplicacion.&amp;nbsp;&lt;br&gt;&lt;br&gt;Aqui es donde entra ngnix que nos ayudara a saber a que servicio nos estamos refiriendo con el mismo endpoint.&lt;br&gt;&lt;br&gt;ngnix va actuar como un reverse proxy&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="862" y="10" width="396" height="163" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" style="edgeStyle=none;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.181;entryY=0.675;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="45" target="45">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" style="edgeStyle=none;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.8;entryY=0.682;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="45" target="45">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="45">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1209" y="345" as="sourcePoint"/>
+                        <mxPoint x="1319" y="328" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="54" value="&lt;div style=&quot;text-align: left&quot;&gt;&lt;ul&gt;&lt;li&gt;&lt;span&gt;/search:&amp;nbsp; va a procerrar enrutar hacia el query service&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;/feeds: va a enrutar hacia command&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;/ws: enruta la peticion al servicio correcto&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="940" y="412" width="293" height="138" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
