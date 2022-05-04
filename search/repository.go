@@ -8,8 +8,8 @@ import (
 
 type SearchRepository interface {
 	Close()
-	IndexFeed(ctx context.Context, feed *models.Feed) error                // Indexar un nuevo feed
-	SearchFeeds(ctx context.Context, query string) ([]*models.Feed, error) // devolvera todos los feed que esten haciendo match con la query
+	IndexFeed(ctx context.Context, feed *models.Feed) error               // Indexar un nuevo feed
+	SearchFeeds(ctx context.Context, query string) ([]models.Feed, error) // devolvera todos los feed que esten haciendo match con la query
 }
 
 var repo SearchRepository
@@ -26,6 +26,6 @@ func IndexFeed(ctx context.Context, feed *models.Feed) error {
 	return repo.IndexFeed(ctx, feed)
 }
 
-func SearchFeeds(ctx context.Context, query string) ([]*models.Feed, error) {
+func SearchFeeds(ctx context.Context, query string) ([]models.Feed, error) {
 	return repo.SearchFeeds(ctx, query)
 }
