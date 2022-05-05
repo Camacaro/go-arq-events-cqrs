@@ -7,6 +7,9 @@ Modulo
 * Postgresql -> ```go get github.com/lib/pq```
 * NATS -> ```go get github.com/nats-io/nats.go```
 * Elastisearch -> ```go get github.com/elastic/go-elasticsearch/v7```
+* Server Route -> ```go get github.com/gorilla/mux```
+* Manejar variables de entorno -> ```go get github.com/kelseyhightower/envconfig```
+* Generar diferentes ID -> ```go get github.com/segmentio/ksuid```
 
 Indexacion de la data (ElasticSearch)
 1. Hacer busqueda mas compleja 
