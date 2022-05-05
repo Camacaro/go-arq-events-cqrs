@@ -10,6 +10,7 @@ Modulo
 * Server Route -> ```go get github.com/gorilla/mux```
 * Manejar variables de entorno -> ```go get github.com/kelseyhightower/envconfig```
 * Generar diferentes ID -> ```go get github.com/segmentio/ksuid```
+* Websocket -> ```go get github.com/gorilla/websocket```
 
 Indexacion de la data (ElasticSearch)
 1. Hacer busqueda mas compleja 

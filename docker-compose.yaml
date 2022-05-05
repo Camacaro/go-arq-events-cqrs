@@ -49,3 +49,13 @@ services:
       NATS_ADDRESS: "nats:4222"
       ELASTICSEARCH_ADDRESS: "elasticsearch:9200"
 
+  pusher:
+    build: "."
+    command: "pusher-service"
+    depends_on:
+      - "nats"
+    ports:
+      - "3000"
+    environment:
+      NATS_ADDRESS: "nats:4222"
+
