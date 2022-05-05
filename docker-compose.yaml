@@ -5,9 +5,9 @@ services:
   postgres:
     build: './database'
     environment:
-      POSTGRES_USER=postgres
-      POSTGRES_PASSWORD=mysecretpassword
-      POSTGRES_DB=mydb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: mysecretpassword
+      POSTGRES_DB: mydb
     restart: always
   
   nats:
@@ -18,3 +18,17 @@ services:
     image: "docker.elastic.co/elasticsearch/elasticsearch:6.2.3"
     environment:
       - "discovery.type=single-node"
+
+  feed:
+    image: "."
+    command: "feed-service"
+    depends_on:
+      - "postgres"
+      - "nats"
+    ports:
+      - "3000"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: mysecretpassword
+      POSTGRES_DB: mydb
+      NATS_ADDRESS: "nats:4222"
