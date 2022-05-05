@@ -32,3 +32,20 @@ services:
       POSTGRES_PASSWORD: mysecretpassword
       POSTGRES_DB: mydb
       NATS_ADDRESS: "nats:4222"
+
+  query:
+    build: "."
+    command: "query-service"
+    depends_on:
+      - "postgres"
+      - "nats"
+      - "elasticsearch"
+    ports:
+      - "3000"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: mysecretpassword
+      POSTGRES_DB: mydb
+      NATS_ADDRESS: "nats:4222"
+      ELASTICSEARCH_ADDRESS: "elasticsearch:9200"
+

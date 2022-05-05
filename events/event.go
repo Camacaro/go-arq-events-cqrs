@@ -18,7 +18,7 @@ type EventStore interface {
 	Close()
 	PublishCreatedFeed(ctx context.Context, feed *models.Feed) error            // Publicar cuando se ha creado un nuevo feed
 	SubscribeCreatedFeed(ctx context.Context) (<-chan CreateFeedMessage, error) // subscriba para cuando un nuevo feed a sido creado y se pueda leer
-	OnCreatedFeed(handler func(CreateFeedMessage)) error                        // Un callback que reaccione cuando un nuevo feed a sido creado
+	OnCreatedFeed(handler func(CreateFeedMessage)) error                        // Un callback que reaccione cuando un nuevo feed a sido creado, el feed se crea (publica en PublishCreatedFeed y lo escucho aqui OnCreatedFeed)
 }
 
 var eventStore EventStore
