@@ -12,14 +12,15 @@ Modulo
 * Generar diferentes ID -> ```go get github.com/segmentio/ksuid```
 * Websocket -> ```go get github.com/gorilla/websocket```
 
-Indexacion de la data (ElasticSearch)
+#### Indexacion de la data (ElasticSearch)
 1. Hacer busqueda mas compleja 
 2. El acceso o lectura a esas busqueda sean rapidas. 
 
-
-Docker-composer
+### Docker
 ```docker-compose up -d --build```
 
-docker compose V2 apple silicon
-docker compose build
-docker compose up
+
+Apple silicon
+docker compose V2 
+* ```docker compose build```
+* ```docker compose up```
