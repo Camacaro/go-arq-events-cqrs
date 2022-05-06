@@ -15,3 +15,11 @@ Modulo
 Indexacion de la data (ElasticSearch)
 1. Hacer busqueda mas compleja 
 2. El acceso o lectura a esas busqueda sean rapidas. 
+
+
+Docker-composer
+```docker-compose up -d --build```
+
+docker compose V2 apple silicon
+docker compose build
+docker compose up
