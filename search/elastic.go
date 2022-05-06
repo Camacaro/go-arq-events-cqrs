@@ -68,7 +68,7 @@ func (e *ElasticSearchRepository) SearchFeeds(ctx context.Context, query string)
 				"query":            query,                            // Valor
 				"fields":           []string{"title", "description"}, // donde quiero buscar
 				"fuziness":         3,                                // porcentaje de coincidencia, 3 significa que debe coincidir al menos 3 porcientos, por ejemplo gou -> go y pueda encontrar go
-				"cutoff_frequency": 0.001,                            // nos ayuda a decir cuantas veces debe coincidir para que sea considerado, para que devuleva los resultados mas relevantes
+				"cutoff_frequency": 0.0001,                           // nos ayuda a decir cuantas veces debe coincidir para que sea considerado, para que devuleva los resultados mas relevantes
 			}, // Este le indica a elasticsearch que queremos traer multiples elementos
 		},
 	}
