@@ -59,3 +59,11 @@ services:
     environment:
       NATS_ADDRESS: "nats:4222"
 
+  nginx:
+    image: "./nginx"
+    ports:
+      - "3000:80"
+    depends_on:
+      - feed
+      - query
+      - pusher
