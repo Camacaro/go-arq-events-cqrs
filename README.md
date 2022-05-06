@@ -1,5 +1,8 @@
 # Go Avanzado: Arquitectura de Eventos y CQRS
 
+## Principal característica de CORS
+Separar escrituras y lecturas a bases de datos como servicios independientes.
+
 Modulo 
 ```go mod init github.com/Camacaro/```
 
